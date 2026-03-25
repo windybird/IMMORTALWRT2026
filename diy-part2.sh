@@ -57,3 +57,7 @@ curl -L https://github.com/UnblockNeteaseMusic/server/raw/enhanced/server.key -o
 
 # lucky
 git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
+
+# timecontrol
+git clone https://github.com/gaobin89/luci-app-timecontrol package/luci-app-timecontrol
+sed -i '/$(eval $(call BuildPackage,$(PKG_NAME)))/s/^/#/' package/luci-app-timecontrol/luci-app-timecontrol/Makefile
