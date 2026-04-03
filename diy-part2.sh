@@ -31,6 +31,9 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-l
 sed -i '/@lan/d' feeds/packages/utils/ttyd/files/ttyd.config
 sed -i "$ a\ \toption ipv6 '1'" feeds/packages/utils/ttyd/files/ttyd.config
 
+# 修改名称
+sed -i 's/model = "JDCloud RE-SS-01";/model = "JDCloud AX1800 Pro";/' target/linux/qualcommax/dts/ipq6000-re-ss-01.dts
+
 # 修正wifi不能启动问题
 # sed -i '/uci commit fstab/a\\nlanCheck=`uci get network.lan.ifname`\nuci set network.lan.ifname="$lanCheck rai0 ra0"\nuci commit network' package/lean/default-settings/files/zzz-default-settings
 
